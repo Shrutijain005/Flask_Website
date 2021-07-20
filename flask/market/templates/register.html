@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+Register Page
+{% endblock %}
+{% block content %}
+
+<body class="text-center">
+    <div class="container col-md-5 p-lg-5 mx-auto my-5 border border-primary bg-light">
+        <form method="POST" class="form-register" style="color:white">
+            {{ form.hidden_tag() }}
+
+            <h1 class="h3 mb-3 text-dark font-weight-normal">
+                Create Your Account
+            </h1>
+            <img src="https://impotmontrealtaxe.ca/wp-content/uploads/2020/03/create-profile-300x300.png"
+                alt="Coding Symbol" width="150" height="160">
+
+            <br>
+            {{ form.username(class="form-control", placeholder="User Name") }}
+            <br>           
+
+            {{ form.email_address(class="form-control", placeholder="Email Address") }}
+
+            <br>
+            {{ form.password1(class="form-control", placeholder="Password") }}
+
+            <br>
+            {{ form.password2(class="form-control", placeholder="Confirm Password") }}
+
+            <br>
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+            <br>
+            <p class="h7 pt-2 text-dark">Already have an account? <a href="{{ url_for('login_page') }}" class="link-info ">Log In</a></p>
+            <!-- <div class="checkbox mb-3">
+                <h6 class="text-dark">Already have an account?</h6>
+                <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Login</a>
+            </div> -->
+
+            
+
+        </form>
+    </div>
+</body>
+{% endblock %}

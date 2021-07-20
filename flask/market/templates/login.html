@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+    Login Page
+{% endblock %}
+{% block content %}
+
+<body class="text-center ">
+    <div class="container col-md-5 p-lg-5 mx-auto my-5 border border-primary bg-light ">
+        <form method="POST" class="form-signin" style="color:white">
+            {{ form.hidden_tag() }}
+         
+            <img src="https://westcoaststocktransfer.com/wp-content/uploads/2018/03/login-button-blue-i8.jpg" alt="Coding Symbol" width="300" height="100">
+            <br>
+            <br>
+            <br>
+            {{ form.username(class="form-control", placeholder="User Name") }}
+            <br>
+            {{ form.password(class="form-control", placeholder="Password") }}
+
+            <br>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+            <div class="checkbox mb-3">
+               <h6 class="pt-3 text-dark">Do not have an account?<a href="{{ url_for('register_page') }}" class="link-info">Register</a></h6>
+               
+            </div>
+
+            
+
+        </form>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page
+{% endblock %}
+{% block content %}
+    
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark" style="color:white">
+        
+        <div class="col-md-5 p-lg-5 mx-auto my-5 border border-primary bg-light">
+            <h1 class="display-4 font-weight-normal text-dark"><b>Welcome To CodingMarket</b></h1>
+            <p class="text-primary">CodingMarket is an online learning marketplace with variety of courses in the field of Python and over 1 million students.</p>
+        
+            <img src="https://cdn.dribbble.com/users/725831/screenshots/3251631/__________-2.png" alt="Coding Symbol" width="200" height="100">
+            <br>
+            <p class="pt-4 h6 text-dark"><strong>Start purchasing products by clicking the link below</strong></p>
+            <a class="btn btn-primary" href="{{ url_for('home_page') }}">Get Started</a>
+        </div>
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+{% endblock %}
+
+ Learn programming, marketing, data science and more.
